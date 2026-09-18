@@ -94,6 +94,8 @@ The website was tested using real browser rendering at three breakpoints, matchi
 the site's own CSS breakpoints: 1440px (desktop), 768px (tablet, iPad-width), and
 375px (mobile, standard phone width).
 
+![image alt](https://github.com/ST10480499/-sparks-and-bolt/blob/main/Screenshot%202026-09-18%20112931.png?raw=true)
+
 #### Desktop (1440px)
 ![Desktop view of homepage](assets/screenshots/desktop-view.png)
 
