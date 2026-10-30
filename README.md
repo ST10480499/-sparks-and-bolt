@@ -83,7 +83,22 @@ The following SEO best practices were implemented:
   - **Internal Linking:** Consistent navigation bar and contextual links link pages together.
   - **Mobile-Friendliness:** The site retains its responsive breakpoints from Part 2 ensuring Google's mobile-first indexing is satisfied.
 
-## 4. Deployment
+## 4. Responsive Testing (Part 2)
+
+The website was tested using real browser rendering at three breakpoints, matching the site's own CSS breakpoints: 1440px (desktop), 768px (tablet, iPad-width), and 375px (mobile, standard phone width).
+
+#### Desktop (1440px)
+![Desktop view of homepage](assets/screenshots/desktop-view.png)
+
+#### Tablet (768px)
+![Tablet view of homepage](assets/screenshots/tablet-view.png)
+
+#### Mobile (375px)
+![Mobile view of homepage](assets/screenshots/mobile-view.png)
+
+At each width, the service cards, navigation, and overall layout were confirmed to reflow correctly according to the breakpoints defined in css/style.css.
+
+## 5. Deployment
 
 The site has been deployed to Netlify and is linked to the GitHub repository. Any updates pushed to the `main` branch automatically trigger a new deployment.
 
