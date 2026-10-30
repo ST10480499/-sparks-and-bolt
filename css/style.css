@@ -1,0 +1,398 @@
+/* =====================================================
+   Sparks & Bolt Electrical Services — Main Stylesheet
+   Part 2: External CSS (extracted from Part 1 inline styles)
+   ===================================================== */
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #222222;
+  background-color: #FFFFFF;
+}
+
+a { text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Header ---------- */
+.header {
+  background-color: #1F3864;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: #F2A900;
+}
+
+.header-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #FFFFFF;
+  margin-left: 8px;
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+  margin-top: 8px;
+}
+
+.nav-link {
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 0 12px;
+  font-size: 15px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #F2A900;
+}
+
+/* ---------- Hero (homepage) ---------- */
+.hero {
+  background-color: #1F3864;
+  background-image: linear-gradient(rgba(31,56,100,0.85), rgba(31,56,100,0.85)),
+    url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+  font-size: 40px;
+  margin: 0 0 16px 0;
+}
+
+.hero-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #E8ECF3;
+  font-size: 18px;
+  max-width: 640px;
+  margin: 0 auto 28px auto;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  background-color: #F2A900;
+  color: #1F3864;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: #F2A900;
+  color: #1F3864;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border: none;
+  padding: 14px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ---------- Generic section / page banner ---------- */
+.page-banner {
+  background-color: #1F3864;
+  padding: 50px 24px;
+  text-align: center;
+}
+
+.page-banner-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+  font-size: 32px;
+  margin: 0;
+}
+
+.page-banner-sub {
+  color: #E8ECF3;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.section {
+  padding: 60px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F3864;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+/* ---------- Service cards (homepage) ---------- */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.service-card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.service-icon { font-size: 36px; }
+
+.service-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F3864;
+  font-size: 18px;
+  margin: 12px 0 8px 0;
+}
+
+.service-text {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* ---------- About / testimonial preview (homepage) ---------- */
+.about-preview {
+  background-color: #F5F7FA;
+  padding: 60px 24px;
+}
+
+.about-preview-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F3864;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.about-text {
+  color: #444444;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.quote {
+  font-style: italic;
+  color: #1F3864;
+  font-size: 17px;
+  border-left: 4px solid #F2A900;
+  padding-left: 16px;
+  margin: 32px auto 0 auto;
+  text-align: left;
+  max-width: 600px;
+}
+
+.link-more {
+  display: inline-block;
+  margin-top: 28px;
+  color: #1F3864;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-bottom: 2px solid #F2A900;
+}
+
+/* ---------- Content pages (About / Services) ---------- */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 24px;
+}
+
+.content h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F3864;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.content h2:first-child { margin-top: 0; }
+
+.content p,
+.content li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333333;
+}
+
+.content ul { line-height: 1.9; }
+
+.service-block {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+}
+
+.service-block:last-of-type {
+  border-bottom: none;
+}
+
+.service-block h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F3864;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.cta-center {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* ---------- Gallery page ---------- */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-figure {
+  margin: 0;
+  width: 300px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.gallery-caption {
+  font-size: 14px;
+  color: #555555;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ---------- Contact page ---------- */
+.contact-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-col { flex: 1 1 380px; }
+.contact-col-narrow { flex: 1 1 300px; }
+
+.contact-col h2,
+.contact-col-narrow h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F3864;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-note {
+  font-size: 12px;
+  color: #888888;
+  margin: 0;
+}
+
+.contact-details {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #333333;
+}
+
+.map-wrap {
+  margin-top: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #E5E5E5;
+}
+
+.map-frame {
+  border: 0;
+  display: block;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #1F3864;
+  color: #E8ECF3;
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer p { margin: 4px 0; }
+
+.footer a {
+  color: #F2A900;
+}
+
+.footer-copyright {
+  margin-top: 12px !important;
+  color: #9FB0CC;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 600px) {
+  .hero-title { font-size: 30px; }
+  .page-banner-title { font-size: 26px; }
+}

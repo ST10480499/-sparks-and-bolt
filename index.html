@@ -7,79 +7,80 @@
   <meta name="description" content="Sparks & Bolt Electrical Services offers reliable electrical installations, repairs, and Certificate of Compliance (COC) inspections across Johannesburg.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="margin:0; padding:0; font-family:'Open Sans', Arial, sans-serif; color:#222222; background-color:#FFFFFF;">
+<body>
 
   <!-- ===================== HEADER ===================== -->
-  <header style="background-color:#1F3864; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;">
-    <div style="display:flex; align-items:center;">
-      <span style="font-family:'Montserrat', sans-serif; font-weight:800; font-size:26px; color:#F2A900;">⚡</span>
-      <span style="font-family:'Montserrat', sans-serif; font-weight:700; font-size:22px; color:#FFFFFF; margin-left:8px;">Sparks &amp; Bolt Electrical</span>
+  <header class="header">
+    <div class="header-brand">
+      <span class="header-logo">⚡</span>
+      <span class="header-name">Sparks &amp; Bolt Electrical</span>
     </div>
 
     <!-- ===================== NAVIGATION ===================== -->
-    <nav style="margin-top:8px;">
-      <a href="index.html" style="color:#F2A900; text-decoration:none; font-family:'Montserrat', sans-serif; font-weight:600; margin:0 12px; font-size:15px;">Home</a>
-      <a href="pages/about.html" style="color:#FFFFFF; text-decoration:none; font-family:'Montserrat', sans-serif; font-weight:600; margin:0 12px; font-size:15px;">About</a>
-      <a href="pages/services.html" style="color:#FFFFFF; text-decoration:none; font-family:'Montserrat', sans-serif; font-weight:600; margin:0 12px; font-size:15px;">Services</a>
-      <a href="pages/gallery.html" style="color:#FFFFFF; text-decoration:none; font-family:'Montserrat', sans-serif; font-weight:600; margin:0 12px; font-size:15px;">Gallery</a>
-      <a href="pages/contact.html" style="color:#FFFFFF; text-decoration:none; font-family:'Montserrat', sans-serif; font-weight:600; margin:0 12px; font-size:15px;">Contact</a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="pages/about.html" class="nav-link">About</a>
+      <a href="pages/services.html" class="nav-link">Services</a>
+      <a href="pages/gallery.html" class="nav-link">Gallery</a>
+      <a href="pages/contact.html" class="nav-link">Contact</a>
     </nav>
   </header>
 
-  <!-- ===================== HERO ===================== -->
   <main>
-    <section style="background-color:#1F3864; background-image:linear-gradient(rgba(31,56,100,0.85), rgba(31,56,100,0.85)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1400&q=80'); background-size:cover; background-position:center; padding:90px 24px; text-align:center;">
-      <h1 style="font-family:'Montserrat', sans-serif; color:#FFFFFF; font-size:40px; margin:0 0 16px 0;">Safe, Reliable Electrical Work You Can Trust</h1>
-      <p style="font-family:'Open Sans', sans-serif; color:#E8ECF3; font-size:18px; max-width:640px; margin:0 auto 28px auto;">Installations, repairs, and Certificate of Compliance (COC) services for homes and businesses across Johannesburg.</p>
-      <a href="pages/contact.html" style="background-color:#F2A900; color:#1F3864; font-family:'Montserrat', sans-serif; font-weight:700; text-decoration:none; padding:14px 32px; border-radius:4px; font-size:16px; display:inline-block;">Request a Free Quote</a>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <h1 class="hero-title">Safe, Reliable Electrical Work You Can Trust</h1>
+      <p class="hero-text">Installations, repairs, and Certificate of Compliance (COC) services for homes and businesses across Johannesburg.</p>
+      <a href="pages/contact.html" class="btn-primary">Request a Free Quote</a>
     </section>
 
     <!-- ===================== SERVICE HIGHLIGHTS ===================== -->
-    <section style="padding:60px 24px; max-width:1100px; margin:0 auto;">
-      <h2 style="font-family:'Montserrat', sans-serif; color:#1F3864; text-align:center; font-size:28px; margin-bottom:40px;">What We Do</h2>
-      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:24px;">
+    <section class="section">
+      <h2 class="section-title">What We Do</h2>
+      <div class="services-grid">
 
-        <div style="flex:1 1 280px; max-width:320px; border:1px solid #E5E5E5; border-radius:8px; padding:24px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
-          <div style="font-size:36px;">🔌</div>
-          <h3 style="font-family:'Montserrat', sans-serif; color:#1F3864; font-size:18px; margin:12px 0 8px 0;">Installations</h3>
-          <p style="font-size:14px; color:#555555; line-height:1.6;">New wiring, plug points, distribution boards, and lighting installed to code.</p>
+        <div class="service-card">
+          <div class="service-icon">🔌</div>
+          <h3 class="service-title">Installations</h3>
+          <p class="service-text">New wiring, plug points, distribution boards, and lighting installed to code.</p>
         </div>
 
-        <div style="flex:1 1 280px; max-width:320px; border:1px solid #E5E5E5; border-radius:8px; padding:24px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
-          <div style="font-size:36px;">🛠️</div>
-          <h3 style="font-family:'Montserrat', sans-serif; color:#1F3864; font-size:18px; margin:12px 0 8px 0;">Repairs &amp; Callouts</h3>
-          <p style="font-size:14px; color:#555555; line-height:1.6;">Fast, safe repairs for faults, trips, and emergencies, including after-hours callouts.</p>
+        <div class="service-card">
+          <div class="service-icon">🛠️</div>
+          <h3 class="service-title">Repairs &amp; Callouts</h3>
+          <p class="service-text">Fast, safe repairs for faults, trips, and emergencies, including after-hours callouts.</p>
         </div>
 
-        <div style="flex:1 1 280px; max-width:320px; border:1px solid #E5E5E5; border-radius:8px; padding:24px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
-          <div style="font-size:36px;">📋</div>
-          <h3 style="font-family:'Montserrat', sans-serif; color:#1F3864; font-size:18px; margin:12px 0 8px 0;">COC Certificates</h3>
-          <p style="font-size:14px; color:#555555; line-height:1.6;">Certificate of Compliance inspections for property sales, transfers, and insurance.</p>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3 class="service-title">COC Certificates</h3>
+          <p class="service-text">Certificate of Compliance inspections for property sales, transfers, and insurance.</p>
         </div>
 
       </div>
     </section>
 
     <!-- ===================== ABOUT / TESTIMONIAL PREVIEW ===================== -->
-    <section style="background-color:#F5F7FA; padding:60px 24px;">
-      <div style="max-width:800px; margin:0 auto; text-align:center;">
-        <h2 style="font-family:'Montserrat', sans-serif; color:#1F3864; font-size:26px; margin-bottom:16px;">Trusted by Johannesburg Homeowners Since 2015</h2>
-        <p style="color:#444444; font-size:16px; line-height:1.7;">Sparks &amp; Bolt Electrical Services has been keeping homes and small businesses in Johannesburg safely powered for over a decade. We are fully qualified, insured, and committed to honest pricing.</p>
-        <blockquote style="font-style:italic; color:#1F3864; font-size:17px; border-left:4px solid #F2A900; padding-left:16px; margin:32px auto 0 auto; text-align:left; max-width:600px;">
+    <section class="about-preview">
+      <div class="about-preview-inner">
+        <h2 class="about-title">Trusted by Johannesburg Homeowners Since 2015</h2>
+        <p class="about-text">Sparks &amp; Bolt Electrical Services has been keeping homes and small businesses in Johannesburg safely powered for over a decade. We are fully qualified, insured, and committed to honest pricing.</p>
+        <blockquote class="quote">
           "They arrived on time, fixed the problem quickly, and the price was exactly what they quoted. Highly recommend." - Local Braamfontein Resident
         </blockquote>
-        <a href="pages/about.html" style="display:inline-block; margin-top:28px; color:#1F3864; font-family:'Montserrat', sans-serif; font-weight:700; text-decoration:none; border-bottom:2px solid #F2A900;">Read More About Us →</a>
+        <a href="pages/about.html" class="link-more">Read More About Us →</a>
       </div>
     </section>
   </main>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer style="background-color:#1F3864; color:#E8ECF3; padding:32px 24px; text-align:center; font-size:14px;">
-    <p style="margin:4px 0;">Sparks &amp; Bolt Electrical Services | Johannesburg, South Africa</p>
-    <p style="margin:4px 0;">📞 011 000 0000 &nbsp;|&nbsp; 💬 <a href="https://wa.me/27600000000" style="color:#F2A900; text-decoration:none;">WhatsApp Us</a> &nbsp;|&nbsp; ✉️ info@sparksandbolt.co.za</p>
-    <p style="margin:4px 0;">Mon - Fri: 07:00 - 17:00 | Sat: 08:00 - 13:00 | Emergency callouts available</p>
-    <p style="margin:12px 0 0 0; color:#9FB0CC;">&copy; 2026 Sparks &amp; Bolt Electrical Services. All rights reserved.</p>
+  <footer class="footer">
+    <p>Sparks &amp; Bolt Electrical Services | Johannesburg, South Africa</p>
+    <p>📞 011 000 0000 &nbsp;|&nbsp; 💬 <a href="https://wa.me/27600000000">WhatsApp Us</a> &nbsp;|&nbsp; ✉️ info@sparksandbolt.co.za</p>
+    <p>Mon - Fri: 07:00 - 17:00 | Sat: 08:00 - 13:00 | Emergency callouts available</p>
+    <p class="footer-copyright">&copy; 2026 Sparks &amp; Bolt Electrical Services. All rights reserved.</p>
   </footer>
 
 </body>
