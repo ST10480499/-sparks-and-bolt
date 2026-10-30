@@ -88,4 +88,101 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+    // ==========================================
+  // ENQUIRY FORM VALIDATION & DYNAMIC RESPONSE
+  // ==========================================
+  const enquiryForm = document.getElementById("enquiryForm");
+  
+  if (enquiryForm) {
+    enquiryForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      let isValid = true;
+      
+      const name = document.getElementById("enqName");
+      const email = document.getElementById("enqEmail");
+      const service = document.getElementById("enqService");
+      const property = document.getElementById("enqProperty");
+      const message = document.getElementById("enqMessage");
+      
+      const nameErr = document.getElementById("enqNameError");
+      const emailErr = document.getElementById("enqEmailError");
+      const serviceErr = document.getElementById("enqServiceError");
+      const propErr = document.getElementById("enqPropertyError");
+      const msgErr = document.getElementById("enqMessageError");
+
+      // Reset errors
+      [nameErr, emailErr, serviceErr, propErr, msgErr].forEach(el => el.style.display = "none");
+      [name, email, service, property, message].forEach(el => el.style.borderColor = "#CCCCCC");
+
+      // Validate Name
+      if (name.value.trim() === "") {
+        nameErr.style.display = "block";
+        name.style.borderColor = "#d32f2f";
+        isValid = false;
+      }
+
+      // Validate Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value.trim())) {
+        emailErr.style.display = "block";
+        email.style.borderColor = "#d32f2f";
+        isValid = false;
+      }
+
+      // Validate Service selection
+      if (service.value === "") {
+        serviceErr.style.display = "block";
+        service.style.borderColor = "#d32f2f";
+        isValid = false;
+      }
+
+      // Validate Property selection
+      if (property.value === "") {
+        propErr.style.display = "block";
+        property.style.borderColor = "#d32f2f";
+        isValid = false;
+      }
+
+      // Validate Message
+      if (message.value.trim().length < 10) {
+        msgErr.style.display = "block";
+        message.style.borderColor = "#d32f2f";
+        isValid = false;
+      }
+
+      // If all is valid, simulate AJAX and show dynamic response
+      if (isValid) {
+        const submitBtn = enquiryForm.querySelector("button[type='submit']");
+        submitBtn.textContent = "Processing...";
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          // Dynamic response based on the selected service
+          let responseText = "";
+          if (service.value === "coc") {
+            responseText = "Based on your request for a COC, we estimate a turnaround time of 2-3 business days. A consultant will contact you with a formal quote.";
+          } else if (service.value === "repair") {
+            responseText = "For emergency repairs, we aim to respond within 2 hours. A team member will call you shortly to confirm details.";
+          } else {
+            responseText = "Thank you for your enquiry. A representative will contact you within 24 hours with availability and a cost estimate.";
+          }
+
+          document.getElementById("dynamicResponseText").textContent = responseText;
+          document.getElementById("enqSuccessModal").style.display = "block";
+          enquiryForm.reset();
+          submitBtn.textContent = "Submit Enquiry";
+          submitBtn.disabled = false;
+        }, 1500);
+      }
+    });
+  }
+
+  // Close Enquiry Modal
+  const closeEnqModalBtn = document.getElementById("closeEnqModalBtn");
+  if (closeEnqModalBtn) {
+    closeEnqModalBtn.addEventListener("click", function() {
+      document.getElementById("enqSuccessModal").style.display = "none";
+    });
+  }
 });

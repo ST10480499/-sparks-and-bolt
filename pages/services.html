@@ -22,6 +22,8 @@
       <a href="services.html" class="nav-link active">Services</a>
       <a href="gallery.html" class="nav-link">Gallery</a>
       <a href="contact.html" class="nav-link">Contact</a>
+      <!-- Added Get a Quote link here -->
+      <a href="enquiry.html" style="color:#FFFFFF; text-decoration:none; font-family:'Montserrat', sans-serif; font-weight:600; margin:0 12px; font-size:15px;">Get a Quote</a>
     </nav>
   </header>
 
@@ -32,28 +34,42 @@
 
     <section class="content" style="max-width:900px;">
 
-      <div class="service-block">
-        <h2>🔌 Electrical Installations</h2>
-        <p>New wiring, plug points, distribution boards, geyser connections, and lighting installations for homes, renovations, and small commercial properties - all completed to South African electrical safety standards.</p>
+      <!-- Dynamic Search Filter for Step 4 -->
+      <div style="margin-bottom: 30px; text-align: center;">
+        <input type="text" id="serviceSearch" placeholder="Search our services..." style="padding: 12px; width: 100%; max-width: 400px; border: 1px solid #CCCCCC; border-radius: 4px; font-family: 'Open Sans', sans-serif; font-size: 16px;">
       </div>
 
-      <div class="service-block">
-        <h2>🛠️ Repairs &amp; Emergency Callouts</h2>
-        <p>Fast diagnosis and repair of tripping breakers, faulty plug points, flickering lights, and other electrical faults. Emergency callouts are available for urgent situations outside of normal business hours.</p>
+      <!-- Accordion Items -->
+      <div class="service-block" style="border-bottom: none; padding-bottom: 0; margin-bottom: 10px;">
+        <button class="accordion" style="width:100%; text-align:left; background-color:#F5F7FA; border:1px solid #E5E5E5; padding:18px; font-size:20px; font-family:'Montserrat', sans-serif; color:#1F3864; font-weight:700; cursor:pointer; border-radius:4px;">🔌 Electrical Installations</button>
+        <div class="panel" style="display:none; padding: 15px 18px; background-color: #fff; border: 1px solid #E5E5E5; border-top: none;">
+          <p style="margin:0; font-size:16px; line-height:1.7; color:#333333;">New wiring, plug points, distribution boards, geyser connections, and lighting installations for homes, renovations, and small commercial properties - all completed to South African electrical safety standards.</p>
+        </div>
       </div>
 
-      <div class="service-block">
-        <h2>📋 Certificate of Compliance (COC)</h2>
-        <p>Legally required electrical compliance inspections and certificates for property sales, transfers, and insurance purposes, issued by a qualified and registered electrician.</p>
+      <div class="service-block" style="border-bottom: none; padding-bottom: 0; margin-bottom: 10px;">
+        <button class="accordion" style="width:100%; text-align:left; background-color:#F5F7FA; border:1px solid #E5E5E5; padding:18px; font-size:20px; font-family:'Montserrat', sans-serif; color:#1F3864; font-weight:700; cursor:pointer; border-radius:4px;">🛠️ Repairs &amp; Emergency Callouts</button>
+        <div class="panel" style="display:none; padding: 15px 18px; background-color: #fff; border: 1px solid #E5E5E5; border-top: none;">
+          <p style="margin:0; font-size:16px; line-height:1.7; color:#333333;">Fast diagnosis and repair of tripping breakers, faulty plug points, flickering lights, and other electrical faults. Emergency callouts are available for urgent situations outside of normal business hours.</p>
+        </div>
       </div>
 
-      <div class="service-block">
-        <h2>🏢 Small Business Electrical Maintenance</h2>
-        <p>Ongoing electrical maintenance contracts for small businesses and shops, including safety inspections, load management advice, and priority callout response.</p>
+      <div class="service-block" style="border-bottom: none; padding-bottom: 0; margin-bottom: 10px;">
+        <button class="accordion" style="width:100%; text-align:left; background-color:#F5F7FA; border:1px solid #E5E5E5; padding:18px; font-size:20px; font-family:'Montserrat', sans-serif; color:#1F3864; font-weight:700; cursor:pointer; border-radius:4px;">📋 Certificate of Compliance (COC)</button>
+        <div class="panel" style="display:none; padding: 15px 18px; background-color: #fff; border: 1px solid #E5E5E5; border-top: none;">
+          <p style="margin:0; font-size:16px; line-height:1.7; color:#333333;">Legally required electrical compliance inspections and certificates for property sales, transfers, and insurance purposes, issued by a qualified and registered electrician.</p>
+        </div>
       </div>
 
-      <div class="cta-center">
-        <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+      <div class="service-block" style="border-bottom: none; padding-bottom: 0; margin-bottom: 10px;">
+        <button class="accordion" style="width:100%; text-align:left; background-color:#F5F7FA; border:1px solid #E5E5E5; padding:18px; font-size:20px; font-family:'Montserrat', sans-serif; color:#1F3864; font-weight:700; cursor:pointer; border-radius:4px;">🏢 Small Business Electrical Maintenance</button>
+        <div class="panel" style="display:none; padding: 15px 18px; background-color: #fff; border: 1px solid #E5E5E5; border-top: none;">
+          <p style="margin:0; font-size:16px; line-height:1.7; color:#333333;">Ongoing electrical maintenance contracts for small businesses and shops, including safety inspections, load management advice, and priority callout response.</p>
+        </div>
+      </div>
+
+      <div class="cta-center" style="margin-top: 40px;">
+        <a href="enquiry.html" class="btn-primary">Get a Free Quote</a>
       </div>
 
     </section>
@@ -66,5 +82,7 @@
     <p class="footer-copyright">&copy; 2026 Sparks &amp; Bolt Electrical Services. All rights reserved.</p>
   </footer>
 
+  <!-- Link to JavaScript File -->
+  <script src="../js/script.js"></script>
 </body>
 </html>
