@@ -3,151 +3,126 @@
 Web Development POE (WEDE5020)
 Student: Roby | Student Number: ST10480499
 
- ## Live Site\n\n🔗 https://resplendent-dieffenbachia-164bf0.netlify.app\n\n
+## Live Site
+🔗 https://resplendent-dieffenbachia-164bf0.netlify.app
 
 ## About This Project
 
-Website for **Sparks & Bolt Electrical Services**, a hypothetical small electrical
-contracting business based in Johannesburg, South Africa.
+Website for **Sparks & Bolt Electrical Services**, a hypothetical small electrical contracting business based in Johannesburg, South Africa.
 
 - **Part 1:** HTML structure, inline CSS only, project planning and proposal.
-- **Part 2 (current):** External CSS styling for a desktop solution, plus responsive design across desktop, tablet, and mobile breakpoints.
-- **Part 3 (upcoming):** JavaScript functionality, form validation, SEO, and external service integration.
+- **Part 2:** External CSS styling for a desktop solution, plus responsive design across desktop, tablet, and mobile breakpoints.
+- **Part 3 (current):** JavaScript functionality, form validation, SEO implementation, and external service integration.
 
 ## File and Folder Structure
 
 sparks-and-bolt/
 - index.html (Homepage)
+- robots.txt (SEO instructions for crawlers)
+- sitemap.xml (SEO site structure)
 - css/
-  - style.css (Single external stylesheet, linked from every page)
+  - style.css (Single external stylesheet)
+- js/
+  - script.js (All JavaScript functionality)
 - pages/
   - about.html
   - services.html
   - gallery.html
   - contact.html
+  - enquiry.html (Specific quote request form)
 - assets/
-  - screenshots/ (Responsive testing screenshots: desktop, tablet, mobile)
+  - screenshots/ (Responsive testing screenshots)
 - docs/
   - Proposal_1_Sparks_and_Bolt_Electrical.docx
   - Proposal_2_Braamfontein_Bake_House.docx
 - README.md
 
-## 1. Working Through Feedback from Part 1
+## 1. Working Through Feedback from Part 2
 
-Part 1 feedback stated that several criteria were not met: no file/folder structure,
-no semantic HTML5 tags, no page content, no navigation menu, and no code comments.
+Following the feedback from Part 2, the following actionable items were addressed in this final Part 3 submission:
 
-These items were queried directly with the lecturer, since the submitted GitHub
-repository (public, and confirmed independently to be accessible) already contained
-all of these elements at the time of marking - a folder structure (pages/, docs/,
-assets/), semantic tags (header, nav, main, section, footer) throughout every page,
-full written content on every page, a working navigation menu linking all five
-pages, and HTML comments labelling each section. This query is on record with the
-module lecturer. No structural corrections were required for these specific items,
-as they were already present and correct.
+- **Commit messages:** More descriptive and granular commit messages are being used throughout the Part 3 development phase.
+- **README detail:** This document has been substantially expanded to include Part 3 features and updated references.
+- **Changelog detail:** The changelog now specifically outlines the additions of JavaScript, SEO files, and new forms.
+- **References:** Additional references have been added to cover the JavaScript and SEO techniques used.
+- **Content depth & Structure:** Repository structure has been verified. Added `js/` and required SEO files (`robots.txt`, `sitemap.xml`) at the root level to ensure compliance.
 
-The feedback that was genuinely actionable has been addressed in this Part 2 update:
+## 2. Part 3: JavaScript Enhancements & Functionality
 
-- Commit messages: more descriptive commit messages are being used going forward.
-- README detail: this document has been substantially expanded (see below).
-- Changelog detail: entries now include more specific descriptions of what changed and why.
-- References: additional references have been added, covering the techniques used in Part 2.
-- Content depth: page content has been reviewed and kept fully aligned with the site's purpose.
+All JavaScript is contained in a single external file (`js/script.js`) and is linked from the bottom of every page to ensure the DOM loads before scripts execute.
 
-## 2. CSS Styling for Desktop Solution
+### 2.1 Interactive Elements
+- **Lightbox Gallery:** The `gallery.html` page now features a functional lightbox. Clicking any gallery image opens it in a larger modal overlay with a close button.
+- **Accordion Menu:** The `services.html` page uses an interactive accordion. Service headers act as buttons that expand and collapse the description panels when clicked.
+- **Animations/Transitions:** CSS transitions are applied to the accordion panels and the hover states of buttons/links to provide smooth visual feedback.
 
-All styling has been moved into a single external stylesheet (css/style.css),
-linked from every page. Key decisions:
+### 2.2 Dynamic Content & DOM Manipulation
+- **Search Filter:** The `services.html` page includes a search input. JavaScript listens for keyup events and dynamically filters the visible service blocks based on the user's text input.
 
-- Base style / reset: a universal box-sizing reset, consistent base font size
-  (1rem = 16px), and sensible defaults for margin, padding, links, and lists.
-- Typography scale: headings (h1-h3) and body text follow a consistent scale
-  based on rem units, using Montserrat for headings and Open Sans for body text,
-  so the visual hierarchy stays consistent across every page.
-- Layout: CSS Grid is used for the service cards, gallery grid, and the contact
-  page's two-column layout; Flexbox is used for the header and navigation bar. The
-  cascading nature of CSS is used throughout - shared rules (e.g. button styles,
-  heading styles) are defined once and reused across every page rather than repeated.
-- Visual styles: colour, background-color, border-radius, and box-shadow are used
-  for cards and buttons, with :hover and :focus states added on links, buttons,
-  and form fields for better interactivity and accessibility.
+### 2.3 Form Functionality and Validation
+The site features two distinct forms, as per the brief:
+1.  **Contact Form (`contact.html`):** A general message form.
+2.  **Enquiry Form (`enquiry.html`):** A specific quote request form, allowing users to select service types and property types.
 
-## 3. Responsive Design
+**Validation & Submission:**
+- **Client-Side Validation:** JavaScript validates that all required fields are filled, that the email address matches a standard regex pattern, and that the phone number is a valid 10-digit SA format. Error messages are displayed dynamically beneath invalid fields.
+- **AJAX Simulation:** Upon successful validation, the form data is not sent via a traditional page reload. Instead, an asynchronous simulation (using `setTimeout`) is triggered. The submit button disables, displays a "Processing..." state, and then displays a success modal.
+- **Dynamic Response:** The `enquiry.html` form features dynamic response text inside the success modal. If a user requests a "COC", the modal provides an estimated turnaround time specific to COCs.
 
-The site is styled desktop-first, with two breakpoints stepping the layout down:
+## 3. Search Engine Optimization (SEO)
 
-- Tablet (max-width: 900px): service cards and gallery images move from 3 columns
-  to 2, and the contact page's two-column layout becomes a single column.
-- Mobile (max-width: 600px): the header stacks vertically, service cards and
-  gallery images move to a single column, and heading sizes reduce slightly to suit
-  smaller screens.
+The following SEO best practices were implemented:
 
-Relative units (rem, em, %) are used throughout instead of fixed pixel values,
-so the layout scales properly across screen sizes. The gallery page uses srcset
-and sizes on every image, serving a smaller image file to smaller screens rather
-than forcing mobile users to download a full-size desktop image. The homepage hero
-background image also swaps to a smaller file size at the mobile breakpoint.
+- **Robots.txt:** Created at the root level to instruct search engine crawlers to index the site and locate the sitemap.
+- **Sitemap.xml:** Created at the root level to provide a structured map of all pages to search engines.
+- **On-Page SEO:**
+  - **Title Tags & Meta Descriptions:** Every page features a unique, keyword-rich `<title>` and `<meta name="description">`.
+  - **Header Tags:** Strict use of `<h1>` for page titles and `<h2>` / `<h3>` for sub-sections to establish content hierarchy.
+  - **Image Optimization:** All images include descriptive `alt` attributes to aid accessibility and image search.
+  - **URL Structure:** Clean, descriptive relative URLs.
+  - **Internal Linking:** Consistent navigation bar and contextual links link pages together.
+  - **Mobile-Friendliness:** The site retains its responsive breakpoints from Part 2 ensuring Google's mobile-first indexing is satisfied.
 
-### Responsive Testing
+## 4. Deployment
 
-The website was tested using real browser rendering at three breakpoints, matching
-the site's own CSS breakpoints: 1440px (desktop), 768px (tablet, iPad-width), and
-375px (mobile, standard phone width).
+The site has been deployed to Netlify and is linked to the GitHub repository. Any updates pushed to the `main` branch automatically trigger a new deployment.
 
-![image alt](https://github.com/ST10480499/-sparks-and-bolt/blob/main/Screenshot%202026-09-18%20112931.png?raw=true)
-
-#### Desktop (1440px)
-![Desktop view of homepage](assets/screenshots/desktop-view.png)
-
-#### Tablet (768px)
-![Tablet view of homepage](assets/screenshots/tablet-view.png)
-
-#### Mobile (375px)
-![Mobile view of homepage](assets/screenshots/mobile-view.png)
-
-At each width, the service cards, navigation, and overall layout were confirmed to
-reflow correctly according to the breakpoints defined in css/style.css.
-
-## How to View the Site
-
-Open index.html in any modern web browser, or use a local server (e.g. VS Code's
-Live Server extension) for the most accurate preview. An internet connection is
-required for the Google Fonts, Unsplash images, and the embedded Google Map to load.
+**Live URL:** [https://resplendent-dieffenbachia-164bf0.netlify.app](https://resplendent-dieffenbachia-164bf0.netlify.app)
 
 ## Changelog
 
-### v2.0.0 — 17 September 2026
-- Extracted all inline CSS from Part 1 into a single external stylesheet (css/style.css), linked from every page.
-- Implemented a consistent base style and typography scale using rem units.
-- Rebuilt page layouts using CSS Grid (service cards, gallery, contact page) and Flexbox (header, navigation).
-- Added :hover and :focus states to links, buttons, and form fields.
-- Added two responsive breakpoints (900px tablet, 600px mobile) with layout, typography, and spacing adjustments at each.
-- Converted all sizing to relative units (rem, em, %) instead of fixed pixels.
-- Added srcset/sizes to all gallery images and a smaller mobile-specific hero background image for responsive image loading.
-- Captured and added new responsive testing screenshots (desktop, tablet, mobile) to this README.
-- Reviewed Part 1 feedback; queried inaccurate criteria directly with the lecturer (see Section 1 above); addressed all genuinely actionable feedback (commit detail, README detail, changelog detail, references).
-- Fixed a repeated nested-folder structure issue in the repository.
+### v3.0.0 — 30 October 2026
+- Added `js/script.js` with comprehensive DOM manipulation and form validation.
+- Implemented Lightbox modal functionality for `gallery.html`.
+- Implemented Search Filter and Accordion functionality for `services.html`.
+- Created `pages/enquiry.html` for specific service quotes.
+- Implemented AJAX form submission simulation and dynamic success modals for both `contact.html` and `enquiry.html`.
+- Added client-side validation for name, email, phone, service selection, and message length.
+- Created `robots.txt` and `sitemap.xml` for SEO.
+- Verified all pages have unique Title Tags, Meta Descriptions, and image Alt attributes.
+- Updated README.md with Part 3 details and new references.
 
-### v1.1.0 — 12 August 2026
-- Fixed nested folder structure in the repository.
-- Added responsive testing screenshots (desktop, tablet, mobile) and a Responsive Testing section to this README.
+### v2.0.0 — 17 September 2026
+- Extracted all inline CSS from Part 1 into a single external stylesheet (css/style.css).
+- Implemented a consistent base style and typography scale using rem units.
+- Rebuilt page layouts using CSS Grid and Flexbox.
+- Added :hover and :focus states to links, buttons, and form fields.
+- Added two responsive breakpoints (900px tablet, 600px mobile).
+- Converted all sizing to relative units (rem, em, %).
+- Added srcset/sizes to all gallery images.
+- Addressed Part 1 feedback.
 
 ### v1.0.0 — 9 August 2026
 - Initial project setup and folder structure created.
-- Website Project Proposals drafted and submitted for lecturer approval (two organisations).
-- Built homepage (index.html) with header, navigation, hero section, service highlights, and footer.
-- Built about.html, services.html, gallery.html, and contact.html with full inline CSS styling.
+- Built all HTML pages (index, about, services, gallery, contact).
 - Added consistent navigation and footer across all pages.
-- Added contact form markup on contact.html (validation to be added with JavaScript in Part 3).
 
 ## References
 
 - Unsplash (2026) Free stock photos. Available at: https://unsplash.com (Accessed: 9 August 2026).
 - Google Fonts (2026) Montserrat and Open Sans. Available at: https://fonts.google.com (Accessed: 9 August 2026).
+- Mozilla Developer Network (2026) JavaScript Form Validation. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation (Accessed: 30 October 2026).
+- Mozilla Developer Network (2026) Introduction to the DOM. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction (Accessed: 30 October 2026).
+- Google Search Central (2026) Robots.txt Specifications. Available at: https://developers.google.com/search/docs/crawling-indexing/robots/intro (Accessed: 30 October 2026).
 - Mozilla Developer Network (2026) CSS Grid Layout. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout (Accessed: 17 September 2026).
-- Mozilla Developer Network (2026) Flexbox. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout (Accessed: 17 September 2026).
-- Mozilla Developer Network (2026) Using media queries. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries (Accessed: 17 September 2026).
-- Mozilla Developer Network (2026) Responsive images (srcset and sizes). Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images (Accessed: 17 September 2026).
-- Mozilla Developer Network (2026) CSS values and units. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units (Accessed: 17 September 2026).
 - Department of Employment and Labour (2026) Electrical Installation Regulations and Certificate of Compliance requirements. Available at: https://www.labour.gov.za (Accessed: 9 August 2026).
-- Google Maps (2026) Embed a map. Available at: https://www.google.com/maps (Accessed: 9 August 2026).
